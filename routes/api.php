@@ -16,3 +16,10 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+//pesquisa de ano, mês e código trabalhador
+Route::get('/contra-cheque/', 'ContraChequeController@show');
+
+//listagem dos anos, {id} : código do usuário
+Route::get('/anos/{id}', 'ContraChequeController@anos');
+
