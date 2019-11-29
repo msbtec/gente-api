@@ -18,8 +18,10 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 //pesquisa de ano, mês e código trabalhador
-Route::get('/contra-cheque/', 'ContraChequeController@show');
+Route::get('/contra-cheque/', 'ContraChequeApiController@show');
 
 //listagem dos anos, {id} : código do usuário
-Route::get('/anos/{id}', 'ContraChequeController@anos');
+Route::get('/anos/{id}', 'ContraChequeApiController@anos');
 
+//Login
+Route::get('/login/{id}', 'AuthController@login');

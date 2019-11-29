@@ -5,9 +5,11 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use DB;
 
-class ContraChequeController extends Controller
+class ContraChequeApiController extends Controller
 {
     public function index(){
+        return [];
+
         return DB::table('persona.vw_contracheque_trabalhadores')
             ->where('cbo_trabalhador', '=', '411005')
             /* ->orWhere('mes_calculo', '=', '7')
