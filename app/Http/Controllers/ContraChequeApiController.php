@@ -32,7 +32,7 @@ class ContraChequeApiController extends Controller
 
     public function anos($cod){
 
-        $results = DB::select( DB::raw("SELECT ano_calculo from persona.vw_folha_pagamento_trabalhadores where codigo_trabalhador= :cod GROUP BY ano_calculo"), array(
+        $results = DB::select( DB::raw("SELECT ano_calculo from persona.vw_folha_pagamento_trabalhadores where codigo_trabalhador= :cod GROUP BY ano_calculo ORDER BY ano_calculo DESC"), array(
             'cod' => $cod,
           ));
 
