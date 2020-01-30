@@ -38,4 +38,15 @@ class ContraChequeApiController extends Controller
 
         return $results;
     }
+
+    public function meses(Request $request){
+        $data = $request->all();
+
+        $results = DB::select( DB::raw("SELECT mes_calculo from persona.vw_folha_pagamento_trabalhadores where codigo_trabalhador= :cod and ano_calculo =:ano GROUP BY mes_calculo ORDER BY mes_calculo ASC"), array(
+            'cod' => $data['codigo'],
+            'ano' => $data['ano'],
+          ));
+
+        return $results;
+    }
 }

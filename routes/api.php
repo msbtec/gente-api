@@ -23,5 +23,8 @@ Route::post('/contra-cheque/', 'ContraChequeApiController@show');
 //listagem dos anos, {id} : código do usuário
 Route::get('/anos/{id}', 'ContraChequeApiController@anos');
 
+//listagem dos meses do dado ano; código trabalhador e ano
+Route::post('/meses/', 'ContraChequeApiController@meses');
+
 //Login
 Route::get('/login/{id}', 'AuthController@login');
