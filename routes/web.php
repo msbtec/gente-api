@@ -11,4 +11,4 @@
 |
 */
 
-Route::get('/', ['uses'=>'ContraChequeController@index']);
+//Route::get('/', ['uses'=>'ContraChequeController@index']);
